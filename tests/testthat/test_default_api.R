@@ -2,6 +2,7 @@
 # Please update as you see appropriate
 
 context("Test DefaultApi")
+invisible(lapply(list.files(file.path("..", "..", "R"), full.names = TRUE), source))
 
 api_instance <- DefaultApi$new()
 
