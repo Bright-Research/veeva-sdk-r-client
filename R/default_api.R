@@ -45855,7 +45855,7 @@ DefaultApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #'
     #' @return API response (void) with additional information such as HTTP status code, headers
-    VobjectsObjectNameActionsMergePostWithHttpInfo = function(object_name, authorization = NULL, content_type = NULL, accept = NULL, x_vault_api_client_id = NULL, _vobjects__object_name__actions_merge_post_request_inner = NULL, ...) {
+    VobjectsObjectNameActionsMergePostWithHttpInfo = function(object_name, authorization = NULL, content_type = NULL, accept = NULL, x_vault_api_client_id = NULL, vobjects__object_name__actions_merge_post_request_inner = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
