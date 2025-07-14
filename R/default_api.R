@@ -5643,13 +5643,11 @@
 #' var_content_type <- "application/json" # character |  (Optional)
 #' var_accept <- "application/json" # character |  (Optional)
 #' var_x_vault_api_client_id <- "{{clientId}}" # character | Include a Client ID to identify this request. This ID appears in the API Usage Logs, which is avaiable to download from Admin > Logs > API Usage Logs or through the Vault REST API with the Download Daily API Usage request. If omitted, the value will appear as `unknown` in the API Usage Log. (Optional)
-#' var__vobjects__object_name__actions_merge_post_request_inner <- c(_vobjects__object_name__actions_merge_post_request_inner$new("duplicate_record_id_example", "main_record_id_example")) # array[VobjectsObjectNameActionsMergePostRequestInner] |  (Optional)
-#'
+#' var_vobjects__object_name__actions_merge_post_request_inner <- c(vobjects__object_name__actions_merge_post_request_inner$new("duplicate_record_id_example", "main_record_id_example")) # array[VobjectsObjectNameActionsMergePostRequestInner] |  (Optional)#'
 #' #Initiate Record Merge
 #' api_instance <- DefaultApi$new()
 #'
-#' api_instance$VobjectsObjectNameActionsMergePost(var_object_name, authorization = var_authorization, content_type = var_content_type, accept = var_accept, x_vault_api_client_id = var_x_vault_api_client_id, _vobjects__object_name__actions_merge_post_request_inner = var__vobjects__object_name__actions_merge_post_request_inner)
-#'
+#' api_instance$VobjectsObjectNameActionsMergePost(var_object_name, authorization = var_authorization, content_type = var_content_type, accept = var_accept, x_vault_api_client_id = var_x_vault_api_client_id, vobjects__object_name__actions_merge_post_request_inner = var_vobjects__object_name__actions_merge_post_request_inner)#'
 #'
 #' ####################  VobjectsObjectNameActionsRecalculaterollupsGet  ####################
 #'
@@ -45828,12 +45826,12 @@ DefaultApi <- R6::R6Class(
     #' @param content_type (optional) No description
     #' @param accept (optional) No description
     #' @param x_vault_api_client_id (optional) Include a Client ID to identify this request. This ID appears in the API Usage Logs, which is avaiable to download from Admin > Logs > API Usage Logs or through the Vault REST API with the Download Daily API Usage request. If omitted, the value will appear as `unknown` in the API Usage Log.
-    #' @param _vobjects__object_name__actions_merge_post_request_inner (optional) No description
+    #' @param vobjects__object_name__actions_merge_post_request_inner (optional) No description
     #' @param ... Other optional arguments
     #'
     #' @return void
-    VobjectsObjectNameActionsMergePost = function(object_name, authorization = NULL, content_type = NULL, accept = NULL, x_vault_api_client_id = NULL, _vobjects__object_name__actions_merge_post_request_inner = NULL, ...) {
-      local_var_response <- self$VobjectsObjectNameActionsMergePostWithHttpInfo(object_name, authorization, content_type, accept, x_vault_api_client_id, _vobjects__object_name__actions_merge_post_request_inner, ...)
+    VobjectsObjectNameActionsMergePost = function(object_name, authorization = NULL, content_type = NULL, accept = NULL, x_vault_api_client_id = NULL, vobjects__object_name__actions_merge_post_request_inner = NULL, ...) {
+      local_var_response <- self$VobjectsObjectNameActionsMergePostWithHttpInfo(object_name, authorization, content_type, accept, x_vault_api_client_id, vobjects__object_name__actions_merge_post_request_inner, ...)      
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         return(local_var_response$content)
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -45853,7 +45851,7 @@ DefaultApi <- R6::R6Class(
     #' @param content_type (optional) No description
     #' @param accept (optional) No description
     #' @param x_vault_api_client_id (optional) Include a Client ID to identify this request. This ID appears in the API Usage Logs, which is avaiable to download from Admin > Logs > API Usage Logs or through the Vault REST API with the Download Daily API Usage request. If omitted, the value will appear as `unknown` in the API Usage Log.
-    #' @param _vobjects__object_name__actions_merge_post_request_inner (optional) No description
+    #' @param vobjects__object_name__actions_merge_post_request_inner (optional) No description
     #' @param ... Other optional arguments
     #'
     #' @return API response (void) with additional information such as HTTP status code, headers
@@ -45885,8 +45883,8 @@ DefaultApi <- R6::R6Class(
 
       header_params["X-VaultAPI-ClientID"] <- `x_vault_api_client_id`
 
-      if (!is.null(`_vobjects__object_name__actions_merge_post_request_inner`)) {
-        body.items <- paste(unlist(lapply(`_vobjects__object_name__actions_merge_post_request_inner`, function(param) {
+      if (!is.null(`vobjects__object_name__actions_merge_post_request_inner`)) {
+        body.items <- paste(unlist(lapply(`vobjects__object_name__actions_merge_post_request_inner`, function(param) {
                                                              param$toJSONString()
                                                          })), collapse = ",")
         local_var_body <- paste0("[", body.items, "]")
