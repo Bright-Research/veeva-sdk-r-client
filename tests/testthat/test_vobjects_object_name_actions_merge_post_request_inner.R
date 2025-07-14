@@ -2,6 +2,7 @@
 # Please update as you see appropriate
 
 context("Test VobjectsObjectNameActionsMergePostRequestInner")
+invisible(lapply(list.files(file.path("..", "..", "R"), full.names = TRUE), source))
 
 model_instance <- VobjectsObjectNameActionsMergePostRequestInner$new()
 
