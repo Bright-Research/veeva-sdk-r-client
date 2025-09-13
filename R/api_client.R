@@ -221,17 +221,17 @@ ApiClient <- R6::R6Class(
         } else if (method == "PUT") {
           httr::PUT(url, query = query_params, headers, body = body,
                     httr::content_type("application/json"), http_timeout,
-                    http_timeout, httr::user_agent(self$`user_agent`), write_stream(stream_callback), ...)
+                    httr::user_agent(self$`user_agent`), write_stream(stream_callback), ...)
         } else if (method == "PATCH") {
           httr::PATCH(url, query = query_params, headers, body = body,
                       httr::content_type("application/json"), http_timeout,
-                      http_timeout, httr::user_agent(self$`user_agent`), write_stream(stream_callback), ...)
+                      httr::user_agent(self$`user_agent`), write_stream(stream_callback), ...)
         } else if (method == "HEAD") {
           httr::HEAD(url, query = query_params, headers, http_timeout,
-                     http_timeout, httr::user_agent(self$`user_agent`), write_stream(stream_callback), ...)
+                     httr::user_agent(self$`user_agent`), write_stream(stream_callback), ...)
         } else if (method == "DELETE") {
           httr::DELETE(url, query = query_params, headers, http_timeout,
-                       http_timeout, httr::user_agent(self$`user_agent`), write_stream(stream_callback), ...)
+                       httr::user_agent(self$`user_agent`), write_stream(stream_callback), ...)
         } else {
           err_msg <- "Http method must be `GET`, `HEAD`, `OPTIONS`, `POST`, `PATCH`, `PUT` or `DELETE`."
           stop(err_msg)
@@ -247,17 +247,17 @@ ApiClient <- R6::R6Class(
         } else if (method == "PUT") {
           httr_response <- httr::PUT(url, query = query_params, headers, body = body,
                     httr::content_type("application/json"), http_timeout,
-                    http_timeout, httr::user_agent(self$`user_agent`), ...)
+                    httr::user_agent(self$`user_agent`), ...)
         } else if (method == "PATCH") {
           httr_response <- httr::PATCH(url, query = query_params, headers, body = body,
                       httr::content_type("application/json"), http_timeout,
-                      http_timeout, httr::user_agent(self$`user_agent`), ...)
+                      httr::user_agent(self$`user_agent`), ...)
         } else if (method == "HEAD") {
           httr_response <- httr::HEAD(url, query = query_params, headers, http_timeout,
-                     http_timeout, httr::user_agent(self$`user_agent`), ...)
+                     httr::user_agent(self$`user_agent`), ...)
         } else if (method == "DELETE") {
           httr_response <- httr::DELETE(url, query = query_params, headers, http_timeout,
-                       http_timeout, httr::user_agent(self$`user_agent`), ...)
+                       httr::user_agent(self$`user_agent`), ...)
         } else {
           err_msg <- "Http method must be `GET`, `HEAD`, `OPTIONS`, `POST`, `PATCH`, `PUT` or `DELETE`."
           stop(err_msg)
